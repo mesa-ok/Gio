@@ -819,3 +819,146 @@ nav a:hover {
     border-radius: 50%;
   }
 }
+/* Barra di navigazione */
+header {
+  background: #111;
+  border-bottom: 3px solid #ff6600;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiungi un'ombra per profondità */
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: #ff6600;
+}
+
+/* Navbar principale */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin-top: 10px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #ff6600; /* Sfondo arancione su hover */
+  border-radius: 5px;
+}
+
+/* Menu mobile */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ff6600;
+  padding: 15px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-300px); /* Nascondi il menu inizialmente */
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav.open ul {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav a {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Menu mobile (hamburger) */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+}
+
+/* Mostra il menu hamburger solo su dispositivi mobili */
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+}
+
+/* Modifica le dimensioni del logo */
+@media only screen and (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+}
