@@ -430,3 +430,392 @@ blockquote cite {
   max-width: 100%;
   height: auto;
 }
+/* Impostazioni di base per la larghezza desktop */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Responsività per dispositivi mobili */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    /* Logo più piccolo per schermi mobili */
+    .logo {
+        font-size: 1.5em;
+    }
+
+    /* Navigazione in colonna per mobile */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Hero image e testo centralizzati per mobile */
+    .hero {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    /* Box dei servizi impilati */
+    .servizi-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* Prezzi in colonna */
+    .prezzi-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prezzo-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .prezzo-box .price {
+        font-size: 1.2em;
+    }
+
+    /* Rende il contatto più user-friendly su mobile */
+    #contact-form input, #contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Ridurre la larghezza della mappa */
+    .maps-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Pulisce lo spazio della sezione recensioni */
+    .recensioni-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Footer a dimensioni più piccole */
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
+/* Impostazioni generali */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: #111;
+  border-bottom: 3px solid #ff6600;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #ff6600;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* Sezione Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74') center/cover no-repeat;
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Sezione Prezzi */
+.prezzi-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.prezzo-box {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  width: 30%;
+}
+
+.prezzo-box h3 {
+  font-size: 2rem;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.prezzo-box p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.prezzo-box a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Sezione Servizi */
+#servizi {
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+}
+
+#servizi h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #FF5722; /* Colore arancione per il titolo */
+}
+
+#servizi p {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.servizi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.servizio {
+  background-color: #444;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servizio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 3rem;
+  color: #FF5722; /* Colore icone arancione */
+  margin-bottom: 20px;
+}
+
+.servizio h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #FF5722; /* Colore arancione per il nome del servizio */
+}
+
+.servizio p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.servizio a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FF5722;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.servizio a:hover {
+  background-color: #FF7043;
+}
+
+.servizio-box {
+  background-color: #222;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid orange;
+  transition: transform 0.3s ease;
+}
+
+.servizio-box:hover {
+  transform: translateY(-5px);
+}
+
+.servizio-box h3 {
+  color: orange;
+  margin-bottom: 0.5rem;
+}
+
+.servizio-box p {
+  color: #ddd;
+}
+
+.recensioni-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.recensione {
+  background-color: #222;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.2);
+}
+
+.recensione h4 {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+/* Stili generali per dispositivi mobili */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Aumenta la leggibilità */
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column; /* Cambia la navigazione a colonna per risparmiare spazio */
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .servizi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne per piccoli schermi */
+    gap: 20px;
+  }
+
+  .prezzi-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Un solo pacchetto per riga su schermi piccoli */
+    gap: 20px;
+  }
+
+  .maps-container iframe {
+    width: 100%;
+    height: 300px; /* Ridimensiona la mappa per il mobile */
+  }
+
+  footer {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  #whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    background-color: #25d366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+  }
+}
