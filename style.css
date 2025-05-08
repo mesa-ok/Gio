@@ -1016,3 +1016,87 @@ nav a:hover {
     font-size: 0.9rem;
   }
 }
+header {
+  background-color: #1c1c1c;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.logo span {
+  color: #ff6b6b;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6b6b;
+}
+
+/* Mobile Menu Styles */
+.menu-toggle {
+  font-size: 1.8rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+#mobile-menu {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    width: 180px;
+    padding: 1rem;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #mobile-menu ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  #mobile-menu.show {
+    display: flex;
+  }
+}
